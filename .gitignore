@@ -1,0 +1,36 @@
+# Build output
+bin/
+obj/
+publish/
+.codex_obj/
+
+# Visual Studio / VS Code local files
+.vs/
+*.user
+*.suo
+.vscode/launch.json
+
+# Generated binaries
+*.exe
+*.dll
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+
+# App/user data
+Drafts/
+History/
+settings.json
+*.log
+
+# Private working files
+*.xlsx
+*.xls
+*.csv
+*.docx
+*.doc
+*.pdf
+
+# Keep explicitly named safe samples if needed later by adding exceptions below.
+# Example:
+# !Test Sample/example-recipients.csv

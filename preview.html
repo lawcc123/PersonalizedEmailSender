@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalized Email Sender - Front Page Demo</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --line: #d6dae1;
+      --text: #111827;
+      --muted: #4b5563;
+      --soft: #6b7280;
+      --blue: #2563eb;
+      --green: #047857;
+      --violet: #7e22ce;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 64px 1fr 36px;
+    }
+
+    header,
+    footer {
+      background: var(--surface);
+      border-color: #e1e5ea;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+    }
+
+    header {
+      border-bottom: 1px solid #e1e5ea;
+      justify-content: space-between;
+    }
+
+    footer {
+      border-top: 1px solid #e1e5ea;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 650;
+    }
+
+    .brand-subtitle {
+      margin-top: 2px;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .top-actions button {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 7px 14px;
+      border-radius: 6px;
+      color: #374151;
+      font: inherit;
+    }
+
+    main {
+      padding: 32px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 650;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .options {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .option {
+      min-height: 300px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 24px;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .option:hover {
+      border-color: var(--accent);
+      background: #f8faff;
+    }
+
+    .number {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .option-title {
+      margin-top: 18px;
+      font-size: 21px;
+      font-weight: 650;
+      line-height: 1.22;
+    }
+
+    .option-copy {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .next {
+      margin-top: auto;
+      padding-top: 26px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .blue {
+      --accent: var(--blue);
+    }
+
+    .green {
+      --accent: var(--green);
+    }
+
+    .violet {
+      --accent: var(--violet);
+    }
+
+    @media (max-width: 860px) {
+      .shell {
+        grid-template-rows: auto 1fr auto;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 20px;
+      }
+
+      main {
+        padding: 24px 20px;
+      }
+
+      .options {
+        grid-template-columns: 1fr;
+      }
+
+      .option {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <div class="brand-title">Personalized Email Sender</div>
+        <div class="brand-subtitle">Condo notice automation</div>
+      </div>
+      <div class="top-actions">
+        <button type="button">Settings</button>
+        <button type="button">Help</button>
+      </div>
+    </header>
+
+    <main>
+      <h1>What would you like to do?</h1>
+      <p class="intro">Choose a starting point for your notice campaign.</p>
+
+      <section class="options" aria-label="Start options">
+        <button class="option blue" type="button">
+          <span class="number">1</span>
+          <span class="option-title">Create a new personalized email sending</span>
+          <span class="option-copy">Start a new campaign, choose the recipient file, Word template, attachments, and output folder.</span>
+          <span class="next">Next step: campaign setup</span>
+        </button>
+
+        <button class="option green" type="button">
+          <span class="number">2</span>
+          <span class="option-title">Continue the existing email work</span>
+          <span class="option-copy">Open a saved campaign folder and continue generating PDFs, creating drafts, or reviewing errors.</span>
+          <span class="next">Next step: select campaign</span>
+        </button>
+
+        <button class="option violet" type="button">
+          <span class="number">3</span>
+          <span class="option-title">View history</span>
+          <span class="option-copy">Review past campaign logs, generated documents, Outlook results, and send history.</span>
+          <span class="next">Next step: history records</span>
+        </button>
+      </section>
+    </main>
+
+    <footer>Prototype front page only. Automation logic will be added later.</footer>
+  </div>
+</body>
+</html>
+
